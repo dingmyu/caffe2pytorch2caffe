@@ -1,0 +1,530 @@
+name: "pytorch"
+input: "data"
+input_dim: 1
+input_dim: 3
+input_dim: 705
+input_dim: 836
+
+layer {
+    name: "ConvNdBackward1"
+    type: "Convolution"
+    bottom: "data"
+    top: "ConvNdBackward1"
+    convolution_param {
+        num_output: 16
+        pad_h: 1
+        pad_w: 1
+        kernel_h: 3
+        kernel_w: 3
+        stride: 2
+    }
+}
+layer {
+    name: "ThresholdBackward2"
+    type: "ReLU"
+    bottom: "ConvNdBackward1"
+    top: "ConvNdBackward1"
+}
+layer {
+  name: "ConvNdBackward1_pool"
+  type: "Pooling"
+  bottom: "ConvNdBackward1"
+  top: "ConvNdBackward1_pool"
+  pooling_param {
+    pool: AVE
+    kernel_size: 2
+    stride: 2
+  }
+}
+layer {
+    name: "ConvNdBackward3"
+    type: "Convolution"
+    bottom: "ConvNdBackward1_pool"
+    top: "ConvNdBackward3"
+    convolution_param {
+        num_output: 16
+        pad_h: 1
+        pad_w: 1
+        kernel_h: 3
+        kernel_w: 3
+        stride: 1
+    }
+}
+layer {
+    name: "ThresholdBackward4"
+    type: "ReLU"
+    bottom: "ConvNdBackward3"
+    top: "ConvNdBackward3"
+}
+layer {
+    name: "ConvNdBackward5"
+    type: "Convolution"
+    bottom: "ConvNdBackward3"
+    top: "ConvNdBackward5"
+    convolution_param {
+        num_output: 8
+        pad_h: 1
+        pad_w: 1
+        kernel_h: 3
+        kernel_w: 3
+        stride: 1
+    }
+}
+layer {
+    name: "ThresholdBackward6"
+    type: "ReLU"
+    bottom: "ConvNdBackward5"
+    top: "ConvNdBackward5"
+}
+layer {
+    name: "ConvNdBackward7"
+    type: "Convolution"
+    bottom: "ConvNdBackward5"
+    top: "ConvNdBackward7"
+    convolution_param {
+        num_output: 4
+        pad_h: 1
+        pad_w: 1
+        kernel_h: 3
+        kernel_w: 3
+        stride: 1
+    }
+}
+layer {
+    name: "ThresholdBackward8"
+    type: "ReLU"
+    bottom: "ConvNdBackward7"
+    top: "ConvNdBackward7"
+}
+layer {
+    name: "ConvNdBackward9"
+    type: "Convolution"
+    bottom: "ConvNdBackward7"
+    top: "ConvNdBackward9"
+    convolution_param {
+        num_output: 4
+        pad_h: 1
+        pad_w: 1
+        kernel_h: 3
+        kernel_w: 3
+        stride: 1
+    }
+}
+layer {
+    name: "ThresholdBackward10"
+    type: "ReLU"
+    bottom: "ConvNdBackward9"
+    top: "ConvNdBackward9"
+}
+layer {
+  name: "ConvNdBackward11_"
+  type: "Concat"
+  bottom: "ConvNdBackward3"
+  bottom: "ConvNdBackward5"
+  bottom: "ConvNdBackward7"
+  bottom: "ConvNdBackward9"
+  top: "ConvNdBackward11_"
+}
+layer {
+    name: "ConvNdBackward12"
+    type: "Convolution"
+    bottom: "ConvNdBackward11_"
+    top: "ConvNdBackward12"
+    convolution_param {
+        num_output: 32
+        pad_h: 1
+        pad_w: 1
+        kernel_h: 3
+        kernel_w: 3
+        stride: 2
+    }
+}
+layer {
+    name: "ThresholdBackward13"
+    type: "ReLU"
+    bottom: "ConvNdBackward12"
+    top: "ConvNdBackward12"
+}
+layer {
+    name: "ConvNdBackward14"
+    type: "Convolution"
+    bottom: "ConvNdBackward12"
+    top: "ConvNdBackward14"
+    convolution_param {
+        num_output: 32
+        pad_h: 1
+        pad_w: 1
+        kernel_h: 3
+        kernel_w: 3
+        stride: 2
+    }
+}
+layer {
+    name: "ThresholdBackward15"
+    type: "ReLU"
+    bottom: "ConvNdBackward14"
+    top: "ConvNdBackward14"
+}
+layer {
+    name: "ConvNdBackward16"
+    type: "Convolution"
+    bottom: "ConvNdBackward14"
+    top: "ConvNdBackward16"
+    convolution_param {
+        num_output: 32
+        pad_h: 1
+        pad_w: 1
+        kernel_h: 3
+        kernel_w: 3
+        stride: 1
+    }
+}
+layer {
+    name: "ThresholdBackward17"
+    type: "ReLU"
+    bottom: "ConvNdBackward16"
+    top: "ConvNdBackward16"
+}
+layer {
+    name: "ConvNdBackward18"
+    type: "Convolution"
+    bottom: "ConvNdBackward16"
+    top: "ConvNdBackward18"
+    convolution_param {
+        num_output: 64
+        pad_h: 1
+        pad_w: 1
+        kernel_h: 3
+        kernel_w: 3
+        stride: 2
+    }
+}
+layer {
+    name: "ThresholdBackward19"
+    type: "ReLU"
+    bottom: "ConvNdBackward18"
+    top: "ConvNdBackward18"
+}
+layer {
+    name: "ConvNdBackward20"
+    type: "Convolution"
+    bottom: "ConvNdBackward18"
+    top: "ConvNdBackward20"
+    convolution_param {
+        num_output: 64
+        pad_h: 1
+        pad_w: 1
+        kernel_h: 3
+        kernel_w: 3
+        stride: 1
+    }
+}
+layer {
+    name: "ThresholdBackward21"
+    type: "ReLU"
+    bottom: "ConvNdBackward20"
+    top: "ConvNdBackward20"
+}
+layer {
+    name: "ConvNdBackward22"
+    type: "Convolution"
+    bottom: "ConvNdBackward20"
+    top: "ConvNdBackward22"
+    convolution_param {
+        num_output: 128
+        pad_h: 1
+        pad_w: 1
+        kernel_h: 3
+        kernel_w: 3
+        stride: 2
+    }
+}
+layer {
+    name: "ThresholdBackward23"
+    type: "ReLU"
+    bottom: "ConvNdBackward22"
+    top: "ConvNdBackward22"
+}
+layer {
+    name: "ConvNdBackward24"
+    type: "Convolution"
+    bottom: "ConvNdBackward22"
+    top: "ConvNdBackward24"
+    convolution_param {
+        num_output: 128
+        pad_h: 1
+        pad_w: 1
+        kernel_h: 3
+        kernel_w: 3
+        stride: 1
+    }
+}
+layer {
+    name: "ThresholdBackward25"
+    type: "ReLU"
+    bottom: "ConvNdBackward24"
+    top: "ConvNdBackward24"
+}
+layer {
+    name: "ConvNdBackward26"
+    type: "Convolution"
+    bottom: "ConvNdBackward24"
+    top: "ConvNdBackward26"
+    convolution_param {
+        num_output: 128
+        pad_h: 1
+        pad_w: 1
+        kernel_h: 3
+        kernel_w: 3
+        stride: 1
+    }
+}
+layer {
+    name: "ThresholdBackward27"
+    type: "ReLU"
+    bottom: "ConvNdBackward26"
+    top: "ConvNdBackward26"
+}
+layer {
+    name: "ConvNdBackward28"
+    type: "Convolution"
+    bottom: "ConvNdBackward26"
+    top: "ConvNdBackward28"
+    convolution_param {
+        num_output: 128
+        pad_h: 1
+        pad_w: 1
+        kernel_h: 3
+        kernel_w: 3
+        stride: 1
+    }
+}
+layer {
+    name: "ThresholdBackward29"
+    type: "ReLU"
+    bottom: "ConvNdBackward28"
+    top: "ConvNdBackward28"
+}
+layer {
+    name: "ConvNdBackward30"
+    type: "Convolution"
+    bottom: "ConvNdBackward28"
+    top: "ConvNdBackward30"
+    convolution_param {
+        num_output: 128
+        pad_h: 1
+        pad_w: 1
+        kernel_h: 3
+        kernel_w: 3
+        stride: 1
+    }
+}
+layer {
+    name: "ThresholdBackward31"
+    type: "ReLU"
+    bottom: "ConvNdBackward30"
+    top: "ConvNdBackward30"
+}
+layer {
+    name: "ConvNdBackward32"
+    type: "Convolution"
+    bottom: "ConvNdBackward30"
+    top: "ConvNdBackward32"
+    convolution_param {
+        num_output: 128
+        pad_h: 1
+        pad_w: 1
+        kernel_h: 3
+        kernel_w: 3
+        stride: 1
+    }
+}
+layer {
+    name: "ThresholdBackward33"
+    type: "ReLU"
+    bottom: "ConvNdBackward32"
+    top: "ConvNdBackward32"
+}
+layer {
+    name: "ConvNdBackward34"
+    type: "Convolution"
+    bottom: "ConvNdBackward32"
+    top: "ConvNdBackward34"
+    convolution_param {
+        num_output: 128
+        pad_h: 1
+        pad_w: 1
+        kernel_h: 3
+        kernel_w: 3
+        stride: 1
+    }
+}
+layer {
+    name: "ThresholdBackward35"
+    type: "ReLU"
+    bottom: "ConvNdBackward34"
+    top: "ConvNdBackward34"
+}
+layer {
+    name: "ConvNdBackward36"
+    type: "Convolution"
+    bottom: "ConvNdBackward34"
+    top: "ConvNdBackward36"
+    convolution_param {
+        num_output: 128
+        pad_h: 1
+        pad_w: 1
+        kernel_h: 3
+        kernel_w: 3
+        stride: 1
+    }
+}
+layer {
+    name: "ThresholdBackward37"
+    type: "ReLU"
+    bottom: "ConvNdBackward36"
+    top: "ConvNdBackward36"
+}
+layer {
+    name: "ConvNdBackward38"
+    type: "Convolution"
+    bottom: "ConvNdBackward36"
+    top: "ConvNdBackward38"
+    convolution_param {
+        num_output: 128
+        pad_h: 1
+        pad_w: 1
+        kernel_h: 3
+        kernel_w: 3
+        stride: 1
+    }
+}
+layer {
+    name: "ThresholdBackward39"
+    type: "ReLU"
+    bottom: "ConvNdBackward38"
+    top: "ConvNdBackward38"
+}
+layer {
+    name: "ConvNdBackward40"
+    type: "Convolution"
+    bottom: "ConvNdBackward38"
+    top: "ConvNdBackward40"
+    convolution_param {
+        num_output: 128
+        pad_h: 1
+        pad_w: 1
+        kernel_h: 3
+        kernel_w: 3
+        stride: 1
+    }
+}
+layer {
+    name: "ThresholdBackward41"
+    type: "ReLU"
+    bottom: "ConvNdBackward40"
+    top: "ConvNdBackward40"
+}
+layer {
+    name: "ConvNdBackward42"
+    type: "Convolution"
+    bottom: "ConvNdBackward40"
+    top: "ConvNdBackward42"
+    convolution_param {
+        num_output: 128
+        pad_h: 1
+        pad_w: 1
+        kernel_h: 3
+        kernel_w: 3
+        stride: 1
+    }
+}
+layer {
+    name: "ThresholdBackward43"
+    type: "ReLU"
+    bottom: "ConvNdBackward42"
+    top: "ConvNdBackward42"
+}
+layer {
+  name: "ConvNdBackward42_zoom"
+  type: "Interp"
+  bottom: "ConvNdBackward42"
+  top: "ConvNdBackward42_zoom"
+  interp_param {
+    zoom_factor: 4
+    pad_beg: 0
+    pad_end: 0
+  }
+}
+layer {
+    name: "ConvNdBackward44"
+    type: "Convolution"
+    bottom: "ConvNdBackward42_zoom"
+    top: "ConvNdBackward44"
+    convolution_param {
+        num_output: 16
+        pad_h: 1
+        pad_w: 1
+        kernel_h: 3
+        kernel_w: 3
+        stride: 1
+    }
+}
+layer {
+    name: "ThresholdBackward45"
+    type: "ReLU"
+    bottom: "ConvNdBackward44"
+    top: "ConvNdBackward44"
+}
+layer {
+  name: "ConvNdBackward44_zoom"
+  type: "Interp"
+  bottom: "ConvNdBackward44"
+  top: "ConvNdBackward44_zoom"
+  interp_param {
+    zoom_factor: 4
+    pad_beg: 0
+    pad_end: 0
+  }
+}
+layer {
+    name: "ConvNdBackward46"
+    type: "Convolution"
+    bottom: "ConvNdBackward44_zoom"
+    top: "ConvNdBackward46"
+    convolution_param {
+        num_output: 8
+        pad_h: 1
+        pad_w: 1
+        kernel_h: 3
+        kernel_w: 3
+        stride: 1
+    }
+}
+layer {
+    name: "ThresholdBackward47"
+    type: "ReLU"
+    bottom: "ConvNdBackward46"
+    top: "ConvNdBackward46"
+}
+layer {
+    name: "ConvNdBackward48"
+    type: "Convolution"
+    bottom: "ConvNdBackward46"
+    top: "ConvNdBackward48"
+    convolution_param {
+        num_output: 5
+        pad_h: 0
+        pad_w: 0
+        kernel_h: 1
+        kernel_w: 1
+        stride: 1
+    }
+}
+
+layer {
+  name: "lane_prob"
+  type: "Softmax"
+  bottom: "ConvNdBackward48"
+  top: "lane_prob"
+}

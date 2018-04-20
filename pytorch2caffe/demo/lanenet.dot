@@ -1,0 +1,204 @@
+// LRP
+digraph {
+	node [shape=box style=filled]
+	96489552 [label=ConvNdBackward]
+	96516048 -> 96489552
+	96516048 [label=ThresholdBackward]
+	96516496 -> 96516048
+	96516496 [label=ConvNdBackward]
+	135839216 -> 96516496
+	135839216 [label=UpsamplingBilinear2dBackward]
+	96517136 -> 135839216
+	96517136 [label=ThresholdBackward]
+	96517456 -> 96517136
+	96517456 [label=ConvNdBackward]
+	134794368 -> 96517456
+	134794368 [label=UpsamplingBilinear2dBackward]
+	96538832 -> 134794368
+	96538832 [label=ThresholdBackward]
+	96539152 -> 96538832
+	96539152 [label=ConvNdBackward]
+	96539536 -> 96539152
+	96539536 [label=ThresholdBackward]
+	103372944 -> 96539536
+	103372944 [label=ConvNdBackward]
+	103373200 -> 103372944
+	103373200 [label=ThresholdBackward]
+	103373520 -> 103373200
+	103373520 [label=ConvNdBackward]
+	103373776 -> 103373520
+	103373776 [label=ThresholdBackward]
+	103374096 -> 103373776
+	103374096 [label=ConvNdBackward]
+	103374352 -> 103374096
+	103374352 [label=ThresholdBackward]
+	103374672 -> 103374352
+	103374672 [label=ConvNdBackward]
+	103506064 -> 103374672
+	103506064 [label=ThresholdBackward]
+	103506384 -> 103506064
+	103506384 [label=ConvNdBackward]
+	103506640 -> 103506384
+	103506640 [label=ThresholdBackward]
+	103506960 -> 103506640
+	103506960 [label=ConvNdBackward]
+	103507216 -> 103506960
+	103507216 [label=ThresholdBackward]
+	103507536 -> 103507216
+	103507536 [label=ConvNdBackward]
+	103507792 -> 103507536
+	103507792 [label=ThresholdBackward]
+	103508112 -> 103507792
+	103508112 [label=ConvNdBackward]
+	103508368 -> 103508112
+	103508368 [label=ThresholdBackward]
+	103508688 -> 103508368
+	103508688 [label=ConvNdBackward]
+	103508944 -> 103508688
+	103508944 [label=ThresholdBackward]
+	103509264 -> 103508944
+	103509264 [label=ConvNdBackward]
+	103509520 -> 103509264
+	103509520 [label=ThresholdBackward]
+	103509840 -> 103509520
+	103509840 [label=ConvNdBackward]
+	103514256 -> 103509840
+	103514256 [label=ThresholdBackward]
+	103514576 -> 103514256
+	103514576 [label=ConvNdBackward]
+	103514832 -> 103514576
+	103514832 [label=ThresholdBackward]
+	103515152 -> 103514832
+	103515152 [label=ConvNdBackward]
+	103515408 -> 103515152
+	103515408 [label=ThresholdBackward]
+	103515728 -> 103515408
+	103515728 [label=ConvNdBackward]
+	103515984 -> 103515728
+	103515984 [label=ThresholdBackward]
+	103516304 -> 103515984
+	103516304 [label=ConvNdBackward]
+	103516560 -> 103516304
+	103516560 [label=CatBackward]
+	103516816 -> 103516560
+	103516816 [label=ThresholdBackward]
+	103517264 -> 103516816
+	103517264 [label=ConvNdBackward]
+	103517520 -> 103517264
+	103517520 [label=AvgPool2DBackward]
+	103517840 -> 103517520
+	103517840 [label=ThresholdBackward]
+	103518096 -> 103517840
+	103518096 [label=ConvNdBackward]
+	103518416 -> 103518096
+	103518416 [label="(16, 3, 3, 3)" fillcolor=lightblue]
+	103518352 -> 103518096
+	103518352 [label="(16)" fillcolor=lightblue]
+	103517456 -> 103517264
+	103517456 [label="(16, 16, 3, 3)" fillcolor=lightblue]
+	103517584 -> 103517264
+	103517584 [label="(16)" fillcolor=lightblue]
+	103516880 -> 103516560
+	103516880 [label=ThresholdBackward]
+	103517648 -> 103516880
+	103517648 [label=ConvNdBackward]
+	103516816 -> 103517648
+	103518864 -> 103517648
+	103518864 [label="(8, 16, 3, 3)" fillcolor=lightblue]
+	103518800 -> 103517648
+	103518800 [label="(8)" fillcolor=lightblue]
+	103516944 -> 103516560
+	103516944 [label=ThresholdBackward]
+	103519184 -> 103516944
+	103519184 [label=ConvNdBackward]
+	103516880 -> 103519184
+	103519376 -> 103519184
+	103519376 [label="(4, 8, 3, 3)" fillcolor=lightblue]
+	103519312 -> 103519184
+	103519312 [label="(4)" fillcolor=lightblue]
+	103517008 -> 103516560
+	103517008 [label=ThresholdBackward]
+	103519696 -> 103517008
+	103519696 [label=ConvNdBackward]
+	103516944 -> 103519696
+	103519888 -> 103519696
+	103519888 [label="(4, 4, 3, 3)" fillcolor=lightblue]
+	103519824 -> 103519696
+	103519824 [label="(4)" fillcolor=lightblue]
+	103516496 -> 103516304
+	103516496 [label="(32, 32, 3, 3)" fillcolor=lightblue]
+	103516624 -> 103516304
+	103516624 [label="(32)" fillcolor=lightblue]
+	103515920 -> 103515728
+	103515920 [label="(32, 32, 3, 3)" fillcolor=lightblue]
+	103516048 -> 103515728
+	103516048 [label="(32)" fillcolor=lightblue]
+	103515344 -> 103515152
+	103515344 [label="(32, 32, 3, 3)" fillcolor=lightblue]
+	103515472 -> 103515152
+	103515472 [label="(32)" fillcolor=lightblue]
+	103514768 -> 103514576
+	103514768 [label="(64, 32, 3, 3)" fillcolor=lightblue]
+	103514896 -> 103514576
+	103514896 [label="(64)" fillcolor=lightblue]
+	103514192 -> 103509840
+	103514192 [label="(64, 64, 3, 3)" fillcolor=lightblue]
+	103514320 -> 103509840
+	103514320 [label="(64)" fillcolor=lightblue]
+	103509456 -> 103509264
+	103509456 [label="(128, 64, 3, 3)" fillcolor=lightblue]
+	103509584 -> 103509264
+	103509584 [label="(128)" fillcolor=lightblue]
+	103508880 -> 103508688
+	103508880 [label="(128, 128, 3, 3)" fillcolor=lightblue]
+	103509008 -> 103508688
+	103509008 [label="(128)" fillcolor=lightblue]
+	103508304 -> 103508112
+	103508304 [label="(128, 128, 3, 3)" fillcolor=lightblue]
+	103508432 -> 103508112
+	103508432 [label="(128)" fillcolor=lightblue]
+	103507728 -> 103507536
+	103507728 [label="(128, 128, 3, 3)" fillcolor=lightblue]
+	103507856 -> 103507536
+	103507856 [label="(128)" fillcolor=lightblue]
+	103507152 -> 103506960
+	103507152 [label="(128, 128, 3, 3)" fillcolor=lightblue]
+	103507280 -> 103506960
+	103507280 [label="(128)" fillcolor=lightblue]
+	103506576 -> 103506384
+	103506576 [label="(128, 128, 3, 3)" fillcolor=lightblue]
+	103506704 -> 103506384
+	103506704 [label="(128)" fillcolor=lightblue]
+	103506000 -> 103374672
+	103506000 [label="(128, 128, 3, 3)" fillcolor=lightblue]
+	103506128 -> 103374672
+	103506128 [label="(128)" fillcolor=lightblue]
+	103374288 -> 103374096
+	103374288 [label="(128, 128, 3, 3)" fillcolor=lightblue]
+	103374416 -> 103374096
+	103374416 [label="(128)" fillcolor=lightblue]
+	103373712 -> 103373520
+	103373712 [label="(128, 128, 3, 3)" fillcolor=lightblue]
+	103373840 -> 103373520
+	103373840 [label="(128)" fillcolor=lightblue]
+	103373136 -> 103372944
+	103373136 [label="(128, 128, 3, 3)" fillcolor=lightblue]
+	103373264 -> 103372944
+	103373264 [label="(128)" fillcolor=lightblue]
+	96539408 -> 96539152
+	96539408 [label="(128, 128, 3, 3)" fillcolor=lightblue]
+	96539664 -> 96539152
+	96539664 [label="(128)" fillcolor=lightblue]
+	96517904 -> 96517456
+	96517904 [label="(16, 128, 3, 3)" fillcolor=lightblue]
+	96517776 -> 96517456
+	96517776 [label="(16)" fillcolor=lightblue]
+	96516816 -> 96516496
+	96516816 [label="(8, 16, 3, 3)" fillcolor=lightblue]
+	96516688 -> 96516496
+	96516688 [label="(8)" fillcolor=lightblue]
+	96515984 -> 96489552
+	96515984 [label="(5, 8, 1, 1)" fillcolor=lightblue]
+	96516176 -> 96489552
+	96516176 [label="(5)" fillcolor=lightblue]
+}
